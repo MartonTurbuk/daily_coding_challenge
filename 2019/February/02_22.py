@@ -2,10 +2,11 @@ numbers = [10, 15, 3, 7]
 
 k = 17
 
-def two_sum(lst, k):
+
+def two_sum(lst, number):
     seen = set()
     for num in lst:
-        if k - num in seen:
+        if number - num in seen:
             return True
         seen.add(num)
     return False
