@@ -23,7 +23,7 @@ def auto_complete(q, string_list):
 
 
 def auto_complete_2(q, string_list):
-    return [chars for chars in string_list if q in chars[:2]]
+    return {chars for chars in string_list if q in chars[:2]}
 
 
 print(auto_complete(query, strings))
