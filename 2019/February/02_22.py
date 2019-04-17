@@ -7,7 +7,7 @@ from functools import reduce
 # For example, if our input was [1, 2, 3, 4, 5], the expected output would be
 # [120, 60, 40, 30, 24]. If our input was [3, 2, 1], the expected output would be [2, 3, 6].
 
-numList = [1, 2, 3, 4, 5]
+numList = [2, 2, 3, 4, 2]
 resultList = []
 
 for number in numList:
