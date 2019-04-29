@@ -17,6 +17,7 @@ However, we need to be careful in that we don't accidentally overwrite an existi
 import random
 import string
 
+
 class URLShortener:
     def __init__(self):
         self.short_to_url = {}
@@ -42,6 +43,7 @@ class URLShortener:
 """ We can improve this a bit. What if we shorten the same url twice? We could potentially re-use the existing shortened url, but we don't know how to access it without querying all values in our dict!
 
 So we can create a second dict that maps urls to shortened urls and update that appropriately. When we see a url we've seen before, we can just then just re-use that shortened url. """
+
 
 class URLShortener_2:
     def __init__(self):
