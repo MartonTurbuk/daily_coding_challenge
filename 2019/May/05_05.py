@@ -22,3 +22,26 @@ And there are 4 12's in the table. """
 
 
 # Solution
+# We can do this naively in O(N^2) time by actually trying out all the possible combinations, and incrementing a counter each time we see one:
+
+def multi_tables(n, x):
+    count = 0
+    for i in range(1, n + 1):
+        for j in range(1, n + 1):
+            if i * j == x:
+                count += 1
+    return count
+
+# We can do this faster, though. Notice, in our example, that if we look at the rows or columns of the cells that matched with 12, that they are all factors of 12. There can also only be one matching cell per row. So, we can determine whether a particular row will match X if:
+
+# It is a factor of X
+# Its corresponding factor is less than N (so it's still in the matrix).
+
+def multi_tables_2(n, x):
+    count = 0
+    for i in range(1, n + 1):
+        if x % i == 0 and x / i <= n:
+            count += 1
+    return count
+
+# This only takes O(N) time.
